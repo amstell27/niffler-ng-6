@@ -14,6 +14,7 @@ public class MainPage {
   private final SelenideElement profile = $("[href='/profile']");
   private final SelenideElement headerStat = $("#stat");
   private final SelenideElement historyOfSpendings = $("#spendings");
+  private final SelenideElement friends = $("[href='/people/friends']");
 
 
   public EditSpendingPage editSpending(String spendingDescription) {
@@ -38,5 +39,11 @@ public class MainPage {
     openPopupMenu.click();
     profile.click();
     return new ProfilePage();
+  }
+
+  public FriendsPage openFriendsPage(){
+    openPopupMenu.click();
+    friends.click();
+    return new FriendsPage();
   }
 }
