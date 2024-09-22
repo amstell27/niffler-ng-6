@@ -33,8 +33,8 @@ public class LoginPage {
   }
 
   public LoginPage checkErrorMessage(String errorText){
-    errorMessage.shouldBe(visible);
-    errorMessage.shouldBe(text(errorText));
+    errorMessage.shouldHave(visible);
+    errorMessage.shouldHave(text(errorText));
     return this;
   }
 

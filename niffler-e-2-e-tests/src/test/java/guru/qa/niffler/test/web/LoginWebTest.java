@@ -17,8 +17,7 @@ public class LoginWebTest {
         String password = "12345";
         Selenide.open(CFG.frontUrl(), LoginPage.class)
                 .login(username, password)
-                .checkThatHistoryOfSpendingsIsDisplayed()
-                .checkThatStatisticsIsDisplayed();
+                .checkIsLoaded();
     }
 
     @Test
