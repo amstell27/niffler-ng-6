@@ -6,7 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class MainPage {
   private final ElementsCollection tableRows = $("#spendings tbody").$$("tr");
@@ -26,11 +25,8 @@ public class MainPage {
     tableRows.find(text(spendingDescription)).should(visible);
   }
 
-  public MainPage checkThatStatisticsIsDisplayed(){
+  public MainPage checkIsLoaded(){
     headerStat.shouldBe(visible);
-    return this;
-  }
-  public MainPage checkThatHistoryOfSpendingsIsDisplayed(){
     historyOfSpendings.shouldBe(visible);
     return this;
   }
