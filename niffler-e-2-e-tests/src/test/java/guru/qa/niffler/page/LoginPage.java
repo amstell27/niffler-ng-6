@@ -32,10 +32,9 @@ public class LoginPage {
     return new RegisterPage();
   }
 
-  public LoginPage checkErrorMessage(String errorText){
-    errorMessage.shouldHave(visible);
+  public void checkErrorMessage(String errorText){
+    errorMessage.shouldBe(visible);
     errorMessage.shouldHave(text(errorText));
-    return this;
   }
 
 }
